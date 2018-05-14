@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_margin"
+        android:paddingRight="@dimen/activity_margin"
+        android:paddingTop="@dimen/activity_margin">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/label_new_task_title"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/label_new_task_title"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:freezesText="true"
+            android:gravity="top"
+            android:hint="@string/hint_enter_task"
+            android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+            android:lines="4"
+            android:textColorHint="@color/hint_enter_note"
+            android:textSize="@dimen/input_task_note" />
+
+    </LinearLayout>
+
+</layout>

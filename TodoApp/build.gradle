@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    dataBinding {
+        enabled true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    defaultConfig {
+        applicationId "com.home.nattapop.todo"
+        minSdkVersion 24
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+def SupportLibraryVersion = '27.1.1'
+//def ArchitectureLibraryVersion = '1.1.1'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Support Library
+    implementation "com.android.support:appcompat-v7:${SupportLibraryVersion}"
+    implementation "com.android.support:recyclerview-v7:${SupportLibraryVersion}"
+    implementation 'com.android.support:design:27.1.1'
+
+    //Layout
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+
+    // Architecture Components
+//    implementation "android.arch.lifecycle:runtime:${ArchitectureLibraryVersion}"
+//    annotationProcessor "android.arch.lifecycle:compiler:${ArchitectureLibraryVersion}"
+//    implementation "android.arch.lifecycle:common-java8:${ArchitectureLibraryVersion}"
+//    implementation "android.arch.persistence.room:runtime:1.1.0"
+//    implementation "android.arch.lifecycle:extensions:${ArchitectureLibraryVersion}"
+
+    //Test & oths
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+}

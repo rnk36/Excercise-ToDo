@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="msg_no_task">ไม่มีรายการ</string>
+    <string name="label_new_task_title">เพิ่มรายการ</string>
+    <string name="label_edit_task_title">แก้ไข</string>
+    <string name="hint_enter_task">เพิ่มข้อมูลรายการ</string>
+
+    <string name="dialog_option_choose">ตัวเลือก</string>
+    <string name="toast_empty_task_input">กรุณากรอกข้อมูล</string>
+    <string name="txt_task_created_date">สร้างเมื่อ:</string>
+
+</resources>
